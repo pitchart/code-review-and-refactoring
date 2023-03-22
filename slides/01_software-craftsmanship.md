@@ -70,7 +70,7 @@ C'est-à-dire qu'en recherchant les éléments de gauche, nous avons trouvé que
 </div>
     </div>
     <div class="col-lg-6">
-<div class="picto picto-target">
+<div class="picto picto-ok">
   <div class="picto-content picto-content-xl">
     <h4>Pratiques individuelles</h4>
     <ul><li>Coding dojos / Katas</li>
@@ -78,7 +78,7 @@ C'est-à-dire qu'en recherchant les éléments de gauche, nous avons trouvé que
     <li>Open source / Pet projects</li></ul>
   </div>
 </div>
-<div class="picto picto-target">
+<div class="picto picto-question">
   <div class="picto-content picto-content-xl">
     <h4>Pratiques collectives</h4>
     <ul><li>Test Driven Development</li>

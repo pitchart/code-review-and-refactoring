@@ -10,7 +10,9 @@
     <div class="col-lg-3">
     </div>
     <div class="col-lg-9">
-<h4>Marie Eugénie Mechain</h4>
+<h4>Marie Eugénie MECHAIN</h4>
+<p>Ingénieure études et développement depuis 2018 / Coach Software Craftsmanship en formation</p>
+<blockquote>Les programmes doivent être faits pour être lus par des gens, et occasionnellement pour être exécutés par des machines.</blockquote>
     </div>
 </div>
 

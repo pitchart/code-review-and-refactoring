@@ -10,12 +10,18 @@
 <img src="ressources/wtf.png" alt="">
     </div>
     <div class="col-lg-7">
-<ul><li>Examen du code produit par un regard extérieur </li>
-<li>Préférer une revue de code *synchrone*<!-- .element: class="highlight highlight-cyan" --> à de longs commentaires écrits</li>
-<li>Le processus de review ne doit pas être inutilement complexe</li>
-<li>Un code écrit en pair ou mob programming est un code déjà revu</li></ul>
+<h4>Examen du code produit par un regard extérieur </h4>
+<ul>
+<li>Favorise la qualité du code (lisibilité, maintenabilité, généricité)</li>
+<li>Réduit le nombre de bugs</li>
+<li>Diffuse les connaissances dans l'équipe</li></ul>
 
 <div class="picto picto-warning mtl">
+  <div class="picto-content picto-content-xs">
+    Le processus de review ne doit pas être inutilement complexe
+  </div>
+</div>
+<div class="picto picto-ko mtl">
   <div class="picto-content picto-content-xs">
     La revue de code n'est utile que si les *défauts* <!-- .element: class="highlight highlight-pink" --> constatés sont *corrigés* <!-- .element: class="highlight highlight-pink" -->
   </div>
@@ -114,28 +120,86 @@
 
 
 
-## Code review once in a while: Mob programming
+## Mob code review
+
+#### Identifier des parties de code à refactorer
+- Un développeur présente une portion de code qu'il a récemment rencontré
+- Les autres développeurs proposent des axes d'amélioration en termes de structuration, de design, ou suggèrent des portions du code ayant des comportements similaires.
+
+<br class="mtl">
+
+#### Homogénéiser les standards de l'équipe <!-- .element: class="mtl" -->
+- Les développeurs présentent tour à tour une portion de code qu'ils ont récemment écrit
+- Les autres développeurs procèdent à la revue du code et s'accordent sur leur pratique de la code review
 
 
 
 ## Faciliter la code review
 
-- automatiser ce qui peut l'être : editorconfig / linter / analyse statique ...
-  - pylint
-- ? commencer par les tests ?
+#### Avant : *automatiser* <!-- .element: class="highlight highlight-cyan" -->
+
+- standards de code (editorconfig / linter)
+- analyse statique (complexité, duplication)
+
+<div class="row mvl">
+    <div class="col-lg-8">
+<h4 class="pts">Privilégier de petits apports de code</h4>
+<p>Facilite la compréhension et la concentration du reviewer</p>
+    </div>
+    <div class="col-lg-4">
+<img src="ressources/short-term-memory.png" alt="">
+    </div>
+</div> 
+
+#### Commencer par la revue des tests
+
+- lecture du code en condition de consommateur, permet de se concentrer sur les interfaces (méthodes publiques) ou le design.
+- Tests = spécifications exécutables
 
 
 
-## code sale / code propre ?
+## A votre tour
+
+#### Qu'est-ce que du code sale ? <!-- .element: class="mtl" -->
+#### Qu'est-ce que du code propre ? <!-- .element: class="mtl" -->
+#### Comment passer de l'un à l'autre ? <!-- .element: class="mtl" -->
 
 
 
 ## Les code smells
 
+Terme inventé par *Kent Beck* <!-- .element: class="highlight highlight-cyan" --> et popularisé par *Martin Fowler* <!-- .element: class="highlight highlight-cyan" -->
+
+> If it stinks, change it
+> <br> *– Kent Beck*
+
+Une notion intuitive rendue plus précise et objective par la littérature existante  
+[Code smells & refactorings @ Refactoring Guru](https://refactoring.guru/refactoring/smells)
+
+<!-- .element: class="arrow arrow-pink mtm" -->
+
+#### De même que les design patterns : <!-- .element: class="mtl" -->
+- Fournissent un vocabulaire standard
+- Donnent des critères d'applicabilité
+- Proposent des solutions : refactoring
+- Recensent des variations
+- Certains sont évidents, d'autres moins
+
 
 
 ## Importance d'un référentiel commun
 
-- CDD
+<div class="row mtl">
+    <div class="col-lg-8">
+      <img src="ressources/crappy-driven-development.png" alt="">
+    </div>
+    <div class="col-lg-4">
+      <h4>Objectif</h4>
+      <p>Rendre le code si sale que personne ne sera capable de le comprendre facilement</p>
+      <h4 class="mtl">Résultat</h4>
+      <ul><li>Une liste d'anti-patterns à traquer en code review</li>
+      <li>Un standard d'équipe connu de tous</li></ul>
+    </div>
+</div>
 
 

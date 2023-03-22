@@ -57,7 +57,6 @@ module.exports = (grunt) ->
             all: ['js/*.js']
 
         copy:
-
             dist:
                 files: [{
                     expand: true
@@ -66,7 +65,10 @@ module.exports = (grunt) ->
                         'bower_components/**'
                         'js/**'
                         'css/*.css'
+                        'css/img/**'
+                        'css/fonts/**'
                         'resources/**'
+                        'ressources/**'
                     ]
                     dest: 'dist/'
                 },{
@@ -83,7 +85,7 @@ module.exports = (grunt) ->
     require('load-grunt-tasks')(grunt)
 
     grunt.registerTask 'buildIndex',
-        'Build index.html from templates/_index.html and slides/list.json.',
+      'Build index.html from templates/_index.html and slides/list.json.',
         ->
             indexTemplate = grunt.file.read 'templates/_index.html'
             sectionTemplate = grunt.file.read 'templates/_section.html'
@@ -99,26 +101,25 @@ module.exports = (grunt) ->
             grunt.file.write 'index.html', html
 
     grunt.registerTask 'test',
-        '*Lint* javascript and coffee files.', [
-            'coffeelint'
-            'jshint'
-        ]
+      '*Lint* javascript and coffee files.', [
+          'coffeelint'
+          'jshint'
+      ]
 
     grunt.registerTask 'serve',
-        'Run presentation locally and start watch process (living document).', [
-            'buildIndex'
-            'sass'
-            'connect:livereload'
-            'watch'
-        ]
+      'Run presentation locally and start watch process (living document).', [
+          'buildIndex'
+          'sass'
+          'connect:livereload'
+          'watch'
+      ]
 
     grunt.registerTask 'dist',
-        'Save presentation files to *dist* directory.', [
-            'test'
-            'sass'
-            'buildIndex'
-            'copy'
-        ]
+      'Save presentation files to *dist* directory.', [
+          'sass'
+          'buildIndex'
+          'copy'
+      ]
 
 
 

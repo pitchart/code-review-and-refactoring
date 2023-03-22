@@ -104,6 +104,6 @@ Cela permet de s'assurer que le refactoring n'entraine pas de regression <!-- .e
 
 
 
-<img src="../css/img/questions.svg" class="question" />
+<img src="ressources/questions.svg" class="question" />
 # Avez-vous des questions ?
 <!-- .slide: class="page-questions" -->
